@@ -1,0 +1,8 @@
+Clear Contrast HC
+
+Color values in theme.css are derived from the JetBrains High Contrast theme
+and the "High contrast" editor color scheme in JetBrains/intellij-community
+(https://github.com/JetBrains/intellij-community), licensed under the
+Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+
+This project is not affiliated with or endorsed by JetBrains.

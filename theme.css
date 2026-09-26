@@ -779,9 +779,9 @@ body .view-header-breadcrumb:hover {
    ========================================================================= */
 
 /* Kursor biały, grubszy niż w IDE dla lepszej widoczności */
-body .cm-editor .cm-cursor,
-body .cm-editor .cm-cursor-primary {
-  border-left: 3px solid var(--hc-fg) !important;
+body .markdown-source-view.mod-cm6 .cm-editor .cm-cursorLayer .cm-cursor,
+body .markdown-source-view.mod-cm6 .cm-editor .cm-cursorLayer .cm-cursor-primary {
+  border-left: 3px solid var(--hc-fg);
 }
 
 /* Aktywna linia: granatowa (CARET_ROW_COLOR) */
@@ -791,9 +791,8 @@ body .markdown-source-view.mod-cm6 .cm-active {
 }
 
 /* Zaznaczenie tekstu w edytorze */
-body .markdown-source-view.mod-cm6 .cm-selectionBackground,
-body .cm-editor.cm-focused .cm-selectionBackground {
-  background-color: var(--hc-editor-selection) !important;
+body .markdown-source-view.mod-cm6 .cm-editor .cm-selectionLayer .cm-selectionBackground {
+  background-color: var(--hc-editor-selection);
 }
 body ::selection {
   background-color: var(--hc-editor-selection);
@@ -818,14 +817,14 @@ body .markdown-source-view.mod-cm6 .cm-foldGutter .cm-gutterElement.cm-active {
 }
 
 /* Pasujące nawiasy (MATCHED_BRACE) i niepasujące (UNMATCHED_BRACE) */
-body .cm-editor .cm-matchingBracket {
-  color: var(--hc-brace) !important;
+body .markdown-source-view.mod-cm6 .cm-editor .cm-line .cm-matchingBracket {
+  color: var(--hc-brace);
   font-weight: 700;
   background-color: transparent;
   outline: 1px solid var(--hc-brace);
 }
-body .cm-editor .cm-nonmatchingBracket {
-  color: var(--hc-error) !important;
+body .markdown-source-view.mod-cm6 .cm-editor .cm-line .cm-nonmatchingBracket {
+  color: var(--hc-error);
   outline: 1px solid var(--hc-error);
 }
 
@@ -856,20 +855,20 @@ body .cm-editor .cm-foldPlaceholder {
 }
 
 /* ---- Znaczniki Markdown w trybie edycji: KEYWORD (pomarańczowe) ---- */
-body .markdown-source-view.mod-cm6 .cm-formatting,
-body .markdown-source-view.mod-cm6 .cm-formatting-header,
-body .markdown-source-view.mod-cm6 .cm-formatting-strong,
-body .markdown-source-view.mod-cm6 .cm-formatting-em,
-body .markdown-source-view.mod-cm6 .cm-formatting-strikethrough,
-body .markdown-source-view.mod-cm6 .cm-formatting-highlight,
-body .markdown-source-view.mod-cm6 .cm-formatting-quote,
-body .markdown-source-view.mod-cm6 .cm-formatting-list,
-body .markdown-source-view.mod-cm6 .cm-formatting-code,
-body .markdown-source-view.mod-cm6 .cm-formatting-link,
-body .markdown-source-view.mod-cm6 .cm-formatting-link-string,
-body .markdown-source-view.mod-cm6 .cm-formatting-task,
-body .markdown-source-view.mod-cm6 .cm-hr {
-  color: var(--hc-keyword) !important;
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-header,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-strong,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-em,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-strikethrough,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-highlight,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-quote,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-list,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-code,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-link,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-link-string,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting-task,
+body .markdown-source-view.mod-cm6 .cm-line .cm-hr {
+  color: var(--hc-keyword);
 }
 body .markdown-source-view.mod-cm6 .cm-formatting-code {
   background-color: transparent;
@@ -1093,10 +1092,11 @@ body .menu-item:hover:not(.is-disabled):not(.is-label) {
   background-color: var(--hc-selection);
   color: var(--hc-fg);
 }
-body .suggestion-item.is-selected *,
-body .menu-item.selected:not(.is-disabled):not(.is-label) *,
-body .menu-item:hover:not(.is-disabled):not(.is-label) * {
-  color: var(--hc-fg) !important;
+body .suggestion-container .suggestion-item.is-selected *,
+body .prompt .suggestion-item.is-selected *,
+body .menu .menu-item.selected:not(.is-disabled):not(.is-label) *,
+body .menu .menu-item:hover:not(.is-disabled):not(.is-label) * {
+  color: var(--hc-fg);
 }
 
 /* Dopasowane litery (CompletionPopup.matchForeground #ED94FF) */
@@ -1105,9 +1105,10 @@ body .fuzzy-match {
   color: var(--hc-match);
   font-weight: 700;
 }
-body .suggestion-item.is-selected .suggestion-highlight {
-  color: var(--hc-fg) !important;
-  text-decoration: underline 2px;
+body .suggestion-container .suggestion-item.is-selected .suggestion-highlight,
+body .prompt .suggestion-item.is-selected .suggestion-highlight {
+  color: var(--hc-fg);
+  border-bottom: 2px solid var(--hc-fg);
 }
 
 /* Pomocnicze informacje w wynikach (ścieżki, skróty): inactiveForeground */
@@ -1208,8 +1209,9 @@ body .vertical-tab-nav-item:hover {
   background-color: var(--hc-hover);
   color: var(--hc-fg);
 }
-body .vertical-tab-header .vertical-tab-nav-item.is-active {
-  background-color: var(--hc-selection) !important;
+body .modal .vertical-tab-header .vertical-tab-header-group .vertical-tab-nav-item.is-active,
+body .modal .vertical-tab-header .vertical-tab-header-group .vertical-tab-nav-item.is-active:hover {
+  background-color: var(--hc-selection);
   color: var(--hc-fg);
   font-weight: 700;
 }
@@ -1266,11 +1268,12 @@ body button.mod-warning {
   border: 1px solid var(--hc-error-border);
   box-shadow: none;
 }
-body button:disabled,
-body button[disabled] {
-  background-color: var(--hc-disabled-bg) !important;
-  color: var(--hc-disabled-fg) !important;
-  border-color: var(--hc-disabled-border) !important;
+body button:not(.clickable-icon):not(.copy-code-button):disabled,
+body button.mod-cta:disabled,
+body button.mod-warning:disabled {
+  background-color: var(--hc-disabled-bg);
+  color: var(--hc-disabled-fg);
+  border-color: var(--hc-disabled-border);
   opacity: 1;
 }
 
@@ -1343,7 +1346,7 @@ body select:disabled {
 
 /* Fokus klawiatury: turkusowa ramka (focusColor) — bez obrysu całego edytora */
 body :focus-visible:not(.cm-content):not([contenteditable="true"]):not(.markdown-preview-view):not(.workspace-leaf-content):not(.view-content):not(.markdown-reading-view) {
-  outline: 2px solid var(--hc-cyan) !important;
+  outline: 2px solid var(--hc-cyan);
   outline-offset: 1px;
 }
 
@@ -1371,20 +1374,14 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   background-color: var(--scrollbar-active-thumb-bg);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  body * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
 
 /* =========================================================================
    10. OPCJE: NAGŁÓWKI
    ========================================================================= */
 
 /* Znacznik # przy nagłówku (MARKDOWN_HEADER_MARKER -> KEYWORD) */
-body .markdown-source-view.mod-cm6 .cm-formatting-header {
-  color: var(--hc-keyword) !important;
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting.cm-formatting-header {
+  color: var(--hc-keyword);
 }
 
 body.cc-headings-rainbow {
@@ -1471,29 +1468,26 @@ body.cc-islands .workspace-ribbon .clickable-icon:hover {
 }
 
 /* Tagi w edytorze: ten sam wygląd co w podglądzie.
-   CodeMirror dzieli tag na dwie części ("#" i nazwę), więc po najechaniu
-   podświetlamy obie naraz: czarny tekst na turkusowym tle. */
-body .markdown-source-view.mod-cm6 .cm-line .cm-hashtag {
-  color: var(--tag-color) !important;
+   CodeMirror dzieli tag na dwie części ("#" i nazwę); po najechaniu
+   podświetlana jest wskazana część: czarny tekst na turkusowym tle. */
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting.cm-hashtag,
+body .markdown-source-view.mod-cm6 .cm-line .cm-hashtag.cm-meta {
+  color: var(--tag-color);
   background-color: transparent;
 }
-body .markdown-source-view.mod-cm6 .cm-line .cm-hashtag:hover,
-body .markdown-source-view.mod-cm6 .cm-line .cm-hashtag-begin:hover + .cm-hashtag-end,
-body .markdown-source-view.mod-cm6 .cm-line .cm-hashtag-begin:has(+ .cm-hashtag-end:hover) {
-  color: #000000 !important;
-  background-color: var(--hc-cyan) !important;
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting.cm-hashtag:hover,
+body .markdown-source-view.mod-cm6 .cm-line .cm-hashtag.cm-meta:hover,
+body .markdown-source-view.mod-cm6 .cm-line .cm-formatting.cm-hashtag-begin:hover + .cm-hashtag-end.cm-meta {
+  color: #000000;
+  background-color: var(--hc-cyan);
 }
 
-/* Tagi w podglądzie i w panelach: po najechaniu czarny tekst na turkusowym */
-body a.tag:hover,
-body .tag:hover,
-body .multi-select-pill:hover,
-body .multi-select-pill:hover .multi-select-pill-content {
-  color: #000000 !important;
-  background-color: var(--hc-cyan) !important;
-  border-color: var(--hc-cyan) !important;
-}
-body .multi-select-pill:hover .multi-select-pill-remove-button,
-body .multi-select-pill:hover .multi-select-pill-remove-button * {
-  color: #000000 !important;
+/* Tagi w podglądzie i we właściwościach: po najechaniu czarny tekst na turkusowym */
+body .markdown-rendered a.tag:hover,
+body .metadata-container .multi-select-pill:hover,
+body .metadata-container .multi-select-pill:hover .multi-select-pill-content,
+body .metadata-container .multi-select-pill:hover .multi-select-pill-remove-button {
+  color: #000000;
+  background-color: var(--hc-cyan);
+  border-color: var(--hc-cyan);
 }

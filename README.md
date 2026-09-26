@@ -25,7 +25,6 @@ Most dark themes use grey text on a grey background, thin icons and subtle hover
 - **Thick white caret** and a navy highlight on the current line, so you don't lose your place when zoomed in.
 - **Links are always underlined** and never rely on color alone. Unresolved links use a dashed red underline.
 - **Wide, always-visible scrollbars.**
-- **Reduced motion:** animations are turned off when the system has "reduce motion" enabled.
 
 ## Screenshots
 
@@ -57,7 +56,7 @@ Colors are taken directly from the open-source IntelliJ Platform files, not eyeb
 | Counters and badges | White with black text |
 | Search matches | Black text on yellow (`#FFD333`) |
 | Matched letters in quick switcher | Pink, bold |
-| Disabled elements and placeholders | Orange text, as in JetBrains |
+| Disabled elements and hint text in empty fields | Orange text, as in JetBrains |
 | Window | Thin light border around the whole window |
 
 **Editor ("High contrast" color scheme)**
@@ -84,16 +83,18 @@ Colors are taken directly from the open-source IntelliJ Platform files, not eyeb
 
 ## Installation
 
+### From Obsidian
+
+1. Open **Settings → Appearance → Themes → Manage**.
+2. Search for **Clear Contrast HC**.
+3. Click **Install and use**.
+
 ### Manually
 
-1. Download the latest release, or `theme.css` and `manifest.json` from this repository.
+1. Download `theme.css` and `manifest.json` from the latest release.
 2. In Obsidian, open **Settings → Appearance** and click the folder icon next to **Themes**.
 3. Create a folder named `Clear Contrast HC` and put both files in it.
 4. Go back to Obsidian, click the refresh icon and choose **Clear Contrast HC**.
-
-### From the community theme browser
-
-*Coming soon* – once the theme is accepted into the Obsidian community catalogue, it will be available under **Settings → Appearance → Themes → Manage**.
 
 ## Options (Style Settings)
 
@@ -129,7 +130,7 @@ If something is hard to read, please [open an issue](../../issues). A short desc
   - `platform/platform-resources/src/themes/islands/HighContrast.theme.json`
   - `platform/platform-resources/src/themes/highContrastScheme.xml`
 - This project is **not affiliated with or endorsed by JetBrains**. JetBrains, IntelliJ IDEA and related names are trademarks of JetBrains s.r.o.
-- Theme code: [MIT](LICENSE).
+- Theme code: [MIT](LICENSE). Attribution for the JetBrains colors: [NOTICE](NOTICE).
 - Created with the help of [Claude](https://claude.ai), an AI assistant by [Anthropic](https://www.anthropic.com). Claude analysed the JetBrains theme files, wrote the CSS, checked the contrast ratios and tested the theme in Obsidian. Design decisions and accessibility feedback came from the author.
 
 ---
