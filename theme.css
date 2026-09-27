@@ -9,9 +9,13 @@
    - intellij-community/plugins/markdown/.../MarkdownHighlighterColors.java
      (jak edytor Markdown JetBrains dziedziczy kolory ze schematu)
 
-   Dostępność: każdy kolor tekstu ma kontrast >= 7:1 (WCAG AAA) do tła,
-   na którym występuje. Kilka barw JetBrains leżących tuż pod progiem
-   rozjaśniono minimalnie; oryginalna wartość jest podana w komentarzu.
+   Dostępność: główne kolory tekstu i składni są dobierane tak, aby na
+   swoich podstawowych tłach osiągać — tam, gdzie jest to praktycznie możliwe —
+   poziom WCAG 2.2 AAA (7:1). Stany hover/selected/active/focus mają pozostać
+   wyraźnie rozróżnialne, ale nie każde możliwe zestawienie kolorów w Obsidianie
+   i wtyczkach zewnętrznych jest gwarantowane na poziomie 7:1.
+   Kilka barw JetBrains leżących tuż pod progiem rozjaśniono minimalnie;
+   oryginalna wartość jest podana w komentarzu.
 
    Opcje (wtyczka Style Settings): wariant Islands, kolorowe nagłówki,
    kursywa nagłówków, ramka okna.

@@ -2,7 +2,7 @@
 
 A high-contrast dark theme for [Obsidian](https://obsidian.md), modelled on **JetBrains High Contrast** (the IntelliJ IDEA / PyCharm / WebStorm theme) and built for people with low vision.
 
-Every text color has a contrast ratio of at least **7:1**, the WCAG 2.2 AAA level. The theme works well with screen magnifiers and large zoom levels.
+The theme is designed for strong visual separation and high text contrast. Primary text and syntax colors are tuned to reach **WCAG 2.2 AAA (7:1)** on their intended base backgrounds where practical. Interactive states such as hover, selected, active and focus are designed to remain clearly distinguishable, but not every possible color pairing across Obsidian and third-party plugins is guaranteed to meet 7:1. The theme works well with screen magnifiers and large zoom levels.
 
 ![Clear Contrast HC – editor](images/classic-editor.png)
 
@@ -76,7 +76,7 @@ Colors are taken directly from the open-source IntelliJ Platform files, not eyeb
 
 ## Changes from the original (for accessibility)
 
-1. **Slightly brighter colors.** About ten JetBrains colors were just below the 7:1 ratio, for example green strings (`#54B33E`), orange keywords (`#ED864A`) and blue selection (`#3333FF`). They were adjusted by the smallest amount needed to reach AAA. Each original value is noted in a comment in `theme.css`.
+1. **Slightly brighter colors.** About ten JetBrains colors were just below the 7:1 ratio on the theme's primary editor/background surfaces, for example green strings (`#54B33E`) and orange keywords (`#ED864A`). They were adjusted by the smallest practical amount to reach or improve toward AAA on those intended surfaces. Each original value is noted in a comment in `theme.css`.
 2. **Thicker caret** than in the IDE (3px).
 3. **Headings are not italic by default.** Italic is harder to read, but you can turn it on in the options.
 4. **Font:** the theme prefers [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/), a typeface designed for low vision, with [JetBrains Mono](https://www.jetbrains.com/lp/mono/) for code. If they are not installed, system fonts are used. You can change fonts in **Settings → Appearance**.
@@ -115,7 +115,7 @@ Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings
 
 ## Compatibility
 
-- Obsidian **1.5.0** or newer (tested on 1.12.7)
+- Obsidian **1.13.7** or newer (tested on 1.13.7)
 - Windows, macOS and Linux
 - Dark theme only; the theme stays dark even if Obsidian is set to light mode
 
@@ -137,7 +137,7 @@ If something is hard to read, please [open an issue](../../issues). A short desc
 
 ## 🇵🇱 Po polsku
 
-**Clear Contrast HC** to ciemny motyw Obsidiana o wysokim kontraście, wzorowany na motywie **JetBrains High Contrast** i zaprojektowany z myślą o osobach słabowidzących. Każdy kolor tekstu ma kontrast co najmniej **7:1** (WCAG AAA). Motyw dobrze współpracuje z lupą systemową i dużym powiększeniem.
+**Clear Contrast HC** to ciemny motyw Obsidiana o wysokim kontraście, wzorowany na motywie **JetBrains High Contrast** i zaprojektowany z myślą o osobach słabowidzących. Główne kolory tekstu i składni są dobierane tak, aby na swoich podstawowych tłach osiągać — tam, gdzie jest to praktycznie możliwe — poziom **WCAG 2.2 AAA (7:1)**. Stany interaktywne, takie jak hover, selected, active i focus, są projektowane tak, aby pozostały wyraźnie rozróżnialne, ale motyw nie gwarantuje kontrastu 7:1 dla każdego możliwego zestawienia kolorów, szczególnie w interfejsach wtyczek zewnętrznych. Motyw dobrze współpracuje z lupą systemową i dużym powiększeniem.
 
 **Najważniejsze cechy:**
 - czarny interfejs, biały tekst, jasne ramki zamiast cieni,
